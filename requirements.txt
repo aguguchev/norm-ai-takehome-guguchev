@@ -1,2 +1,9 @@
-pydantic==2.5.3
+pydantic==2.11.4
+fastapi==0.115.12
+qdrant-client==1.14.2
+llama-index==0.12.37
+pymupdf4llm==0.0.24
+llama-index-vector-stores-postgres==0.5.3
+llama-index-vector-stores-qdrant==0.6.0
+
 # add additional modules here

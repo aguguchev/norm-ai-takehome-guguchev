@@ -31,4 +31,4 @@ def main():
     index.connect() # implemented
     index.load(docs) # implemented
 
-    uvicorn.run(app=app, host='0.0.0.0', port=8080)
+    uvicorn.run(app=app, host='0.0.0.0', port=80)

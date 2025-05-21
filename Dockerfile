@@ -17,6 +17,9 @@ ENV OPENAI_API_KEY=$OPENAI_API_KEY
 # Copy the content of the local src directory to the working directory
 COPY ./app /norm-fullstack/app
 COPY ./docs /norm-fullstack/docs
+COPY ./run.py /norm-fullstack/run.py
+
+EXPOSE 80
 
 # Command to run on container start
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["python3", "/norm-fullstack/run.py"]
