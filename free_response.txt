@@ -1,0 +1,18 @@
+What immediately stands out to me is the difficulty of reliable input parsing. Especially in 
+the United States, I imagine there is very little formatting standardization between federal,
+state, and local legal documentation. While the "fuzziness" of LLM inference might gloss over
+some of the impacts of parsing errors, if we are returning source docs to the user as well,
+any parsing errors could lead to immediate loss of user trust.
+
+I also see E2E testing as being a significant challenge. There doesn't seem to be a publicly 
+available testing corpus for so specific a use case, but testing is a critical part of 
+maintaining the accuracy of such services as logic changes and retrained models are deployed.
+For established use cases, it may be possible to extract client request/response pairs and use
+them to build a corpus of our own for testing. However, that could constitute a significant
+data privacy issue.
+
+I'm also curious how "self-contained" legal texts are in the real world. US Law to my
+knowledge relies greatly on precedent set by previous similar cases. It may be possible that
+new precedentially-significant rulings are so infrequent that we can handle these cases
+manually. Then we can rely on the model to relate these rulings to their relevant statutes
+once they are in the doc store.
