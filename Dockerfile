@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 RUN pip install uvicorn
 
 # API key
+ARG OPENAI_API_KEY
 ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 # Copy the content of the local src directory to the working directory

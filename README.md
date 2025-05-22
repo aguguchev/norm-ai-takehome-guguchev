@@ -14,7 +14,11 @@ python3 <your-dest>/norm-ai-takehome-guguchev/run.py
 ### Method 2: Run the service in a docker container
 You can also run the service in a docker container by executing the following commands:
 ```
-docker build -t norm-demo .
+# For Windows users
+docker build -t norm-demo --build-arg OPENAI_API_KEY=$env:OPENAI_API_KEY .
+# For macOS/Linux users
+docker build -t norm-demo --build-arg OPENAI_API_KEY=$OPENAI_API_KEY .
+
 docker container run -p 8080:80 norm-demo:latest
 ```
 
